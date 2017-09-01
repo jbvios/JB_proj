@@ -18,8 +18,7 @@ jobs:
 
     steps:
       - checkout
-      - run: npm install
-      - run: composer install 
+      - run: composer install
 
 
       # Download and cache dependencies
