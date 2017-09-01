@@ -18,6 +18,8 @@ jobs:
 
     steps:
       - checkout
+      - run: npm install
+      - run: composer install 
 
 
       # Download and cache dependencies
@@ -35,5 +37,5 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
         
       # run tests!
-      - run: npm install
+
       - run: phpunit
