@@ -23,6 +23,8 @@ jobs:
       run: npm install
       run: npm test
 
+      - run: composer install --prefer-source --no-interaction
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -31,11 +33,11 @@ jobs:
           - v1-dependencies-
 
       #
-      - run: composer install --prefer-source --no-interaction
+
 
       - save_cache:
           paths:
-            - ./vendor/bin/phpunit
+            - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
         
       # run tests!
