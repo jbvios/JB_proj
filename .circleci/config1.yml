@@ -27,8 +27,12 @@ jobs:
           - v1-dependencies-
 
 
-      dependencies:
-        override:
-          - composer install --no-interaction
-      
+      - save_cache:
+          paths:
+            - /
+          key: v1-dependencies-{{ checksum "composer.json" }}
+        
+
+      - run: composer install -n --prefer-dist
+
       - run: phpunit
