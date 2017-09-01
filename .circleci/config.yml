@@ -4,9 +4,6 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1.8-browsers
-      machine:
-        php:
-          version: 7.0.4
     working_directory: ~/JB_proj
     steps:
       - checkout
