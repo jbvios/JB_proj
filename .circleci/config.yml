@@ -19,4 +19,4 @@ jobs:
           paths:
             - vendor
 
-            - run: info.php
+                - run: ./vendor/bin/phpunit
