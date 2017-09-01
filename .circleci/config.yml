@@ -4,6 +4,9 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1.8-browsers
+      machine:
+        php:
+          version: 7.0.4
     working_directory: ~/JB_proj
     steps:
       - checkout
@@ -19,7 +22,6 @@ jobs:
           paths:
             - vendor
       - run: touch storage/testing.sqlite
-      #- run: php artisan migrate --env=testing --database=sqlite_testing --force
-      #- run: ./vendor/bin/codecept build
-      #- run: ./vendor/bin/codecept run
-      #- run: info.php
+      test:
+        override:
+            - vendor/bin/phpunit
