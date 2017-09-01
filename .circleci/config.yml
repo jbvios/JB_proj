@@ -19,6 +19,7 @@ jobs:
     steps:
       - checkout
 
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -34,4 +35,5 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
         
       # run tests!
+      - run: npm install
       - run: phpunit
