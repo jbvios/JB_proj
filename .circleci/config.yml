@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: https://github.com/jbvios/JB_proj.git
+    working_directory: /var/www/html
     docker:
       - image: php:7.1-apache
         environment:
