@@ -29,7 +29,7 @@ jobs:
           - v1-dependencies-
 
       #
-      - run: composer install -n --prefer-dist
+      - run: composer install --prefer-source --no-interaction
 
       - save_cache:
           paths:
