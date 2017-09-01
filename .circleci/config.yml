@@ -20,6 +20,8 @@ jobs:
 
     steps:
       - checkout
+      run: npm install
+      run: npm test
 
       # Download and cache dependencies
       - restore_cache:
