@@ -23,7 +23,7 @@ jobs:
       run: npm install
       run: npm test
 
-      - run: composer install --prefer-source --no-interaction
+
 
       # Download and cache dependencies
       - restore_cache:
@@ -33,6 +33,7 @@ jobs:
           - v1-dependencies-
 
       #
+      - run: composer install --prefer-source --no-interaction
 
 
       - save_cache:
