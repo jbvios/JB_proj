@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: C:\Users\jbvios\Laravel_Projects\JB_proj
+    working_directory: https://github.com/jbvios/JB_proj.git
     docker:
       - image: php:7.1-apache
         environment:
