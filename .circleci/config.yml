@@ -19,6 +19,4 @@ jobs:
           paths:
             - vendor
       - run: touch storage/testing.sqlite
-      test:
-        override:
-            - vendor/bin/phpunit
+      
